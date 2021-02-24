@@ -1,0 +1,1 @@
+export const INIT_URL = 'http://restcountries.eu/rest/v2/region/europe'
