@@ -1,4 +1,4 @@
-import { createSlice,createAsyncThunk } from '@reduxjs/toolkit';
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import axios from 'axios'
 import {INIT_URL} from "../utils/urls";
 
@@ -12,18 +12,19 @@ export const countriesSlice = createSlice({
     name: 'countries',
     initialState: {
         list: [],
-        status:'sleeping',
-        error:null
+        status: 'sleeping',
+        error: null
     },
     reducers: {
-        sortByName(state,action){
+        sortByName(state, action) {
             console.log(action.payload)
-            if(action.payload ==='ZA') {
+            if (action.payload === 'ZA') {
                 state.list.sort((a, b) => b.name.toLowerCase().localeCompare(a.name.toLowerCase()));
+            } else {
+                state.list.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
             }
-            else {state.list.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));}
         },
-        changePosition (state,action){
+        changePosition(state, action) {
             state.list = action.payload
         }
     },
@@ -42,6 +43,6 @@ export const countriesSlice = createSlice({
     }
 });
 
-export const { changePosition, sortByName} = countriesSlice.actions;
+export const {changePosition, sortByName} = countriesSlice.actions;
 export const selectCountries = state => state.countries.list
 export default countriesSlice.reducer

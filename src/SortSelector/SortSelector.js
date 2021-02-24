@@ -13,7 +13,8 @@ function SortSelector() {
     }
 
     return (
-        <Select className={s.selector} placeholder={'Choose the sorting method'} onChange={handleChange} options={options}/>
+        <Select className={s.selector} placeholder={'Choose the sorting method'} onChange={handleChange}
+                options={options}/>
     );
 }
 

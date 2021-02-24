@@ -7,7 +7,7 @@ const DragAndDropItem = sortableElement(({el}) =>
         <img src={el.flag} alt={'No flag for this country'}/>
         <span>Total area:</span>
         <div className={s.textDiv}>{el.area} sq.km</div>
-            <span>Population:</span>
+        <span>Population:</span>
         <div className={s.textDiv}>{el.population}</div>
     </div>);
 
