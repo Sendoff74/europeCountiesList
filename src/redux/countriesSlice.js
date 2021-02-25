@@ -4,7 +4,6 @@ import {INIT_URL} from "../utils/urls";
 
 export const fetchCountries = createAsyncThunk('countries/fetchCountries', async () => {
     const response = await axios.get(INIT_URL)
-    console.log(response.data)
     return response.data
 })
 
