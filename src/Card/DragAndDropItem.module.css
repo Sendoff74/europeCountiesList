@@ -10,7 +10,7 @@
     width: 22%;
     height: 15rem;
     margin: 10px;
-    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
     cursor: pointer;
 }
 

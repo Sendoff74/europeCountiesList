@@ -4,6 +4,7 @@ import {sortableContainer} from 'react-sortable-hoc';
 import DragAndDropItem from "../Card/DragAndDropItem";
 
 const DragAndDropContainer = sortableContainer(({items}) => {
+    //Creating container for Drag&Drop
     return (
         <div className={s.countryList}>
             {items.map((el, index) => (

@@ -19,6 +19,7 @@ function CountryList() {
         dispatch(changePosition([...arrayMove(countryList, oldIndex, newIndex)]))
     }
     return (
+        //Rendering list with data
         <>
             {countryState.status === 'ready' ?
                 <>

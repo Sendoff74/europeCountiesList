@@ -2,6 +2,7 @@ import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import axios from 'axios'
 import {INIT_URL} from "../utils/urls";
 
+//Fetching countries
 export const fetchCountries = createAsyncThunk('countries/fetchCountries', async () => {
     const response = await axios.get(INIT_URL)
     return response.data
@@ -16,6 +17,7 @@ export const countriesSlice = createSlice({
     },
     reducers: {
         sortByName(state, action) {
+            //Sorting list from Z to A and A to Z
             if (action.payload === 'ZA') {
                 state.list.sort((a, b) => b.name.toLowerCase().localeCompare(a.name.toLowerCase()));
             } else {

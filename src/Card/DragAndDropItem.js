@@ -2,6 +2,7 @@ import s from "./DragAndDropItem.module.css"
 import {sortableElement} from 'react-sortable-hoc';
 
 const DragAndDropItem = sortableElement(({el}) =>
+    //Creating item to put in drag and drop container
     <div className={s.countryCard}>
         <p>{el.name}</p>
         <img src={el.flag} alt={'No flag for this country'}/>
