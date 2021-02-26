@@ -16,7 +16,6 @@ export const countriesSlice = createSlice({
     },
     reducers: {
         sortByName(state, action) {
-            console.log(action.payload)
             if (action.payload === 'ZA') {
                 state.list.sort((a, b) => b.name.toLowerCase().localeCompare(a.name.toLowerCase()));
             } else {
